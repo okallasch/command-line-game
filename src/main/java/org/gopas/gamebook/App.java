@@ -99,18 +99,16 @@ public class App {
         locationList.add(location15);
         locationList.add(end);
 
-        while (player.getHealth() > 0) {
-            for (Location location : locationList) {
-                if (location.getPlayer() != null) {
+        for (Location location : locationList) {
+            if (location.getPlayer() != null) {
 
-                    if (location.isItEnd()){
-                        System.out.println("Blahopřeji vyhrál si");
-                        break;
-                    }
+                if (location.isItEnd()) {
+                    System.out.println("Blahopřeji vyhrál si");
+                    break;
+                }
+                if (player.getHealth() > 0) {
                     getDirections(location);
-                    if (player.getHealth() > 0) {
-                        changeLocation(location, player);
-                    }
+                    changeLocation(location, player);
                 }
             }
         }
