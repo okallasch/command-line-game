@@ -1,0 +1,4 @@
+org\gopas\gamebook\model\Location.class
+org\gopas\gamebook\App.class
+org\gopas\gamebook\model\Creature.class
+org\gopas\gamebook\model\Player.class
