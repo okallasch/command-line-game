@@ -1,4 +1,7 @@
-package org.gopas.gamebook.model;
+package cz.kallasch.gamebook.model;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Location {
 
@@ -7,12 +10,7 @@ public class Location {
     private Creature creature;
     private boolean isItEnd;
 
-
-
-    private Location north;
-    private Location south;
-    private Location west;
-    private Location east;
+    private List<Location> locationList = new ArrayList<>();
 
 
     public Location(String name, Player player, Creature creature) {
@@ -23,38 +21,6 @@ public class Location {
 
     public Location(String name) {
         this.name = name;
-    }
-
-    public Location getNorth() {
-        return north;
-    }
-
-    public void setNorth(Location north) {
-        this.north = north;
-    }
-
-    public Location getSouth() {
-        return south;
-    }
-
-    public void setSouth(Location south) {
-        this.south = south;
-    }
-
-    public Location getWest() {
-        return west;
-    }
-
-    public void setWest(Location west) {
-        this.west = west;
-    }
-
-    public Location getEast() {
-        return east;
-    }
-
-    public void setEast(Location east) {
-        this.east = east;
     }
 
     public String getName() {
@@ -88,4 +54,15 @@ public class Location {
     public void setItEnd(boolean itEnd) {
         isItEnd = itEnd;
     }
+
+    public List<Location> getLocationList() {
+        return locationList;
+    }
+
+    public void setLocationList(List<Location> locationList) {
+        this.locationList = locationList;
+    }
+
+
+
 }

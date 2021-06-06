@@ -1,4 +1,4 @@
-package org.gopas.gamebook.model;
+package cz.kallasch.gamebook.model;
 
 public class Creature {
 
